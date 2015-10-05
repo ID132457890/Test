@@ -1,0 +1,40 @@
+func select()
+    {
+        if !remainsSelected
+        {
+            self.backgroundColor = previousBackgroundColor;
+            
+            titleLabel.textColor = UIColor.whiteColor();
+            
+            action(self);
+        }
+        else
+        {
+            action(self);
+            
+            if imageType
+            {
+                self.transform = CGAffineTransformMakeScale(0.8, 0.8);
+                self.backgroundColor = UIColor.clearColor();
+            }
+            else
+            {
+                if !selected
+                {
+                    self.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5);
+                    
+                    titleLabel.textColor = UIColor.blackColor();
+                    
+                    selected = true;
+                }
+                else
+                {
+                    self.backgroundColor = UIColor.clearColor();
+                    
+                    titleLabel.textColor = UIColor.whiteColor();
+                    
+                    selected = false;
+                }
+            }
+        }
+    }
