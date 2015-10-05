@@ -4,7 +4,7 @@ func select()
         {
             self.backgroundColor = previousBackgroundColor;
             
-            titleLabel.textColor = UIColor.whiteColor();
+            titleLabel.textColor = UIColor.blackColor();
             
             action(self);
         }
